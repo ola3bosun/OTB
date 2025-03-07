@@ -90,7 +90,7 @@ export default function Navbar() {
                 <DecryptedText text="Services" />
               </MotionLink>
               <MotionLink
-                to="/portfolio"
+                to="/Portfolio"
                 className={styles.link}
                 variants={linkVariants}
                 onClick={() => setIsOpen(false)}

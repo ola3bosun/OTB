@@ -5,6 +5,10 @@
   position: relative;
   overflow-x: hidden;
   overflow: hidden;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @media (prefers-reduced-motion: no-preference) {
