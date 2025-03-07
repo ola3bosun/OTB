@@ -7,30 +7,10 @@
   overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -44,16 +24,16 @@
 
 .location{
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 1rem;
+  left: 1rem;
   z-index: 2001;
-  color: red;
+  color: #fff;
+  mix-blend-mode: difference;
   width: fit-content;
   display: flex;
   align-items: center;
   gap: 1rem;
   font-size: 1rem;
-
 }
 
 .blinker{
@@ -61,6 +41,7 @@
   width: 1rem;
   border-radius: 50%;
   background-color: red;
+  mix-blend-mode: darken;
   position: relative;
   animation: live infinite ease-in 1.5s ;
 }
@@ -76,4 +57,14 @@
   top: 0;
   z-index: 9999;
   background-color: #282c34;
+}
+
+.studioName{
+  color: #fff;
+  mix-blend-mode: difference;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9999;
 }

@@ -7,7 +7,9 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "framer-motion": "^12.4.10",
     "gsap": "^3.12.7",
+    "ogl": "^1.0.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
@@ -38,6 +40,6 @@
     ]
   },
   "devDependencies": {
-    "react-router-dom": "^7.2.0"
+    "react-router-dom": "^7.3.0"
   }
 }

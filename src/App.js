@@ -4,7 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./App.css";
 import CountUp from "./components/Countup";
 import GridDistortion from "./components/GridDistortion";
+import TrueFocus from './components/TrueFocus';
 import Navbar from "./components/Navbar";
+import MetaBalls from './components/MetaBalls';
 import Portfolio from "./components/Portfolio";
 
 // LocationTime component to display London's current time
@@ -26,9 +28,7 @@ const LocationTime = () => {
 
   return (
     <div className="location">
-      <div className="descr"></div>
-      <div className="blinker"></div>
-      London, UK. {time}
+      London, UK.  <div className="blinker"></div> {time}
     </div>
   );
 };
@@ -101,15 +101,30 @@ function App() {
                 top: "50%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
-                color: "#fff",
+                color: "white",
                 fontSize: "3rem",
                 textAlign: "center",
-                zIndex: 2000,
+                zIndex: 9,
                 fontFamily: "Herva",
                 mixBlendMode: "difference",
+                height: "100vh",
+                width: "100vw"
               }}
             >
-              OTB studios
+              <MetaBalls
+              color="#ffffff"
+              cursorBallColor="#ffffff"
+              cursorBallSize={2}
+              ballCount={15}
+              animationSize={10}
+              enableMouseInteraction={true}
+              enableTransparency={true}
+              hoverSmoothness={0.05}
+              clumpFactor={2}
+              speed={0.3}
+            />
+
+              <TrueFocus />
             </div>
             <Navbar />
           </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom'; // Use Link for routing
+import { Link } from "react-router-dom";
 import styles from './Navbar.module.css';
 import DecryptedText from './NavDecryptAnim';
 
@@ -31,28 +31,30 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Hamburger Button Always Visible */}
-      <motion.div
+     <div className='navContainer'>
+      <div className="studioName">
+      studio OTB
+      </div>
+
+       {/* Hamburger Button Always Visible */}
+       <motion.div
         className={`${styles.menuBtn} ${isOpen ? styles.open : ''}`}
         onClick={() => setIsOpen(!isOpen)}
         whileTap={{ scale: 0.95 }}
       >
         <motion.div
           className={`${styles.line} ${styles.line1}`}
-          animate={isOpen ? { rotate: 45, translateY: 7 } : { rotate: 0, translateY: 0 }}
+          animate={isOpen ? { rotate: 45, translateY: 8 } : { rotate: 0, translateY: 0 }}
           transition={{ duration: 0.7, ease: [0.9, 0, 0.33, 1] }}
         />
-        <motion.div
-          className={`${styles.line} ${styles.line2}`}
-          animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
-          transition={{ duration: 0.7, ease: [0.9, 0, 0.33, 1] }}
-        />
+        
         <motion.div
           className={`${styles.line} ${styles.line3}`}
-          animate={isOpen ? { rotate: -45, translateY: -7 } : { rotate: 0, translateY: 0 }}
-          transition={{ duration: 0.7, ease: [0.9, 0, 0.33, 1] }}
+          animate={isOpen ? { rotate: -45, translateY: -4 } : { rotate: 0, translateY: 0 }}
+          transition={{ delay: 0.7, duration: 0.7, ease: [0.9, 0, 0.33, 1] }}
         />
       </motion.div>
+     </div>
 
       {/* Sliding Navigation Panel */}
       <AnimatePresence>
@@ -79,7 +81,6 @@ export default function Navbar() {
               >
                 <DecryptedText text="Home" />
               </MotionLink>
-              <hr className={styles.divider} />
               <MotionLink
                 to="/services"
                 className={styles.link}
@@ -88,17 +89,14 @@ export default function Navbar() {
               >
                 <DecryptedText text="Services" />
               </MotionLink>
-              <hr className={styles.divider} />
               <MotionLink
-                to="/Portfolio"
+                to="/portfolio"
                 className={styles.link}
                 variants={linkVariants}
                 onClick={() => setIsOpen(false)}
-                
               >
                 <DecryptedText text="Portfolio" />
               </MotionLink>
-              <hr className={styles.divider} />
               <MotionLink
                 to="/get-a-quote"
                 className={styles.link}
@@ -107,7 +105,6 @@ export default function Navbar() {
               >
                 <DecryptedText text="Get A Quote" />
               </MotionLink>
-              <hr className={styles.divider} />
             </motion.div>
           </motion.nav>
         )}
